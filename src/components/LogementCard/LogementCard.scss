@@ -1,0 +1,25 @@
+.logement-card {
+    background: black;
+    position: relative;
+    height: 340px;
+    width: 340px;
+    border-radius: 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 1) 41%, rgba(0, 0, 0, 0) 100%); // Fade effect
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 10, 1) 41%, rgba(0, 0, 0, 0) 100%); // For WebKit browsers
+        border-radius: 10px;
+    }
+
+    p {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}

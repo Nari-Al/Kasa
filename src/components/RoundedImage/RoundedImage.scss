@@ -1,0 +1,36 @@
+.imageContainer {
+    position: relative;
+    background-image: url('../../assets/ImageSource1.png');
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 25px;
+        z-index: 1;
+    }
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        z-index: 2;
+        text-shadow:
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
+    }
+}

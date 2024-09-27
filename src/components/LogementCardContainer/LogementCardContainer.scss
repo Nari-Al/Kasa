@@ -1,0 +1,14 @@
+.logement-card-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: #F6F6F6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 25px;
+
+    .logement-card {
+        margin: 40px 10px;
+    }
+
+}

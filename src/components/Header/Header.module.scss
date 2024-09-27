@@ -1,0 +1,28 @@
+header {
+    padding: 32px 100px;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 40px;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+}
