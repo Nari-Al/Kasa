@@ -1,0 +1,267 @@
+.logementContainer {
+    color: #FF6060;
+}
+
+.logementDetails {
+    position: relative;
+
+    .logementTitle {
+        font-size: 36px;
+        font-weight: 500;
+        margin: 8px 0;
+        max-width: 80%;
+    }
+
+    .logementLocation {
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0
+    }
+
+    .hostContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+
+        img {
+            border-radius: 50%;
+            height: 64px;
+            width: 64px;
+            margin-left: 0.5em;
+        }
+
+        p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: end;
+            line-height: 142%;
+        }
+    }
+
+    .logementRating {
+        position: absolute;
+        right: 0;
+        top: 5.5em;
+
+        span {
+            margin: 0 6px;
+        }
+    }
+
+    .tagsContainer {
+        color: white;
+        display: flex;
+        justify-content: start;
+        list-style: none;
+        margin: 1.5em 0;
+        padding: 0;
+        gap: 1em;
+
+        .tag {
+            background-color: #FF6060;
+            border-radius: 10px;
+            height: 25px;
+            max-width: 180px;
+            padding: 0 3em;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    .logementCollapseContainer {
+        display: flex;
+        justify-content: space-between;
+
+        .collapseContainer {
+            width: 585px;
+            margin: 0;
+
+            .titleContainer {
+                width: 565px;
+            }
+        }
+    }
+}
+
+
+
+// CAROUSEL
+
+.carouselContainer {
+    position: relative;
+    margin-bottom: 2em;
+
+    .carouselImage {
+        height: auto;
+        border-radius: 25px;
+        width: 1240px;
+        height: 415px;
+        object-fit: cover;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 0;
+        position: absolute;
+        top: 160px;
+    }
+
+    .carouselButtonPrevious {
+        left: 16px;
+        transform: rotate(180deg);
+    }
+
+    .carouselButtonNext {
+        right: 16px;
+    }
+
+    .carouselNumerotation {
+        position: absolute;
+        bottom: 1em;
+        right: 605px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 1320px) {
+    .logementDetails {
+        .logementCollapseContainer {
+            flex-direction: column;
+            position: relative;
+            gap: 20px;
+
+            .collapseContainer {
+                width: 100%;
+
+                .titleContainer {
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+        .logementRating {
+            span {
+                margin: 2px;
+            }
+
+            img {
+                width: 18px;
+            }
+        }
+
+        .logementTitle {
+            font-size: 24px;
+        }
+
+        .logementLocation {
+            font-size: 16px;
+        }
+    }
+
+    .carouselContainer {
+        width: 100%;
+
+        .carouselImage {
+            width: 100%;
+        }
+
+        .carouselNumerotation {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .logementDetails {
+
+        .logementCollapseContainer {
+            flex-direction: column;
+            position: relative;
+
+            .collapseContainer {
+                width: 100%;
+
+                .titleContainer {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .logementTitle {
+            font-size: 18px;
+        }
+
+        .logementLocation {
+            font-size: 14px;
+        }
+
+        .hostContainer {
+            top: unset;
+
+            p {
+                font-size: 12px;
+            }
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .tagsContainer {
+            margin: 1em 0;
+            gap: 8px;
+
+            .tag {
+                font-size: 10px;
+                padding: 0 14px;
+            }
+        }
+
+        .logementRating {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin-bottom: 1em;
+
+            span {
+                margin: 2px;
+            }
+
+            img {
+                width: 18px;
+            }
+        }
+    }
+
+    .carouselContainer {
+        min-width: 335px;
+
+        button {
+            top: 180px;
+
+            img {
+                height: 24px;
+            }
+        }
+
+        .carouselImage {
+            min-width: 335px;
+        }
+    }
+}

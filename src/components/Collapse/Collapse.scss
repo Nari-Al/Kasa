@@ -1,0 +1,110 @@
+.collapseContainer {
+    border-radius: 10px;
+    margin: 3em auto;
+    overflow: hidden;
+    width: 1024px;
+    user-select: none;
+
+    .titleContainer {
+        background-color: #FF6060;
+        cursor: pointer;
+        padding: 10px;
+        width: 1004px;
+        position: absolute;
+        align-items: center;
+        color: #fff;
+        border-radius: 10px;
+
+        h2 {
+            margin: 0;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            transition: transform 0.5s ease; // Smooth rotation
+        }
+
+        .open {
+            transform: rotate(180deg); // Rotate the arrow when open
+        }
+    }
+
+    .contentContainer {
+        background-color: #F6F6F6;
+        height: 0;
+        transition: all 0.5s ease;
+        padding: 1em;
+        color: black;
+        overflow: hidden;
+
+        &.open {
+            height: auto;
+            padding-top: 4em;
+        }
+
+        ul {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            padding-left: 1.5em;
+            list-style: none;
+            gap: 8px;
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    .collapseContainer {
+        width: 100%;
+        position: relative;
+        min-height: 48px;
+
+        .titleContainer {
+            width: 100%;
+            height: 36px;
+
+            .arrow {
+                right: 2em;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .imageContainer {
+        margin-bottom: 1em;
+    }
+
+    .collapseContainer {
+        margin: 1em auto;
+        width: 335px;
+        min-height: 0;
+
+        .titleContainer {
+            height: 32px;
+            width: 323px;
+            max-height: 32px;
+            padding: 0 0 0 12px;
+            display: flex;
+            align-items: center;
+
+            h2 {
+                font-size: 13px;
+            }
+
+            .arrow {
+                top: 10px;
+                right: 1em;
+                width: 18px;
+            }
+        }
+
+        .contentContainer {
+            &.open {
+                padding-top: 2.5em;
+            }
+        }
+    }
+}

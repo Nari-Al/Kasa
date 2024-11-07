@@ -1,5 +1,7 @@
 header {
-    padding: 32px 100px;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 32px 0;
     display: flex;
     justify-content: space-between;
 
@@ -23,6 +25,18 @@ header {
             text-decoration: underline;
         }
     }
+}
 
+@media (max-width: 560px) {
+    header {
+        img {
+            width: 145px;
+        }
 
+        ul {
+            text-transform: uppercase;
+            font-size: 12px;
+            gap: 20px;
+        }
+    }
 }

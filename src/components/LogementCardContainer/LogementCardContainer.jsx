@@ -9,6 +9,7 @@ const LogementCardContainer = () => {
         <div className='logement-card-container'>
             {logements.map(logement => (
                 <LogementCard
+                    key={logement.id}
                     logementId={logement.id}
                     title={logement.title}
                     cover={logement.cover}

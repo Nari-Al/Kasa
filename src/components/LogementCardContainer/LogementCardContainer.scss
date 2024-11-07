@@ -1,14 +1,27 @@
 .logement-card-container {
     margin-top: 2em;
+    padding: 1.5em 0.5em;
     margin-bottom: 2em;
     background: #F6F6F6;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    /* Adjust the minmax value for your card size */
+    gap: 20px;
+    justify-items: center;
     border-radius: 25px;
 
     .logement-card {
-        margin: 40px 10px;
+        margin: 20px;
     }
+}
 
+@media (max-width: 560px) {
+    .logement-card-container {
+        background: none;
+        padding: 0;
+
+        .logement-card {
+            margin: 0;
+        }
+    }
 }

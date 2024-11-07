@@ -23,3 +23,12 @@
         font-size: 18px;
     }
 }
+
+@media (max-width: 560px) {
+    .logement-card {
+        position: relative;
+        height: 255px;
+        width: 335px;
+        border-radius: 10px;
+    }
+}

@@ -1,6 +1,5 @@
 .imageContainer {
     position: relative;
-    background-image: url('../../assets/ImageSource1.png');
     background-size: cover;
     background-position: center;
     height: 220px;
@@ -10,6 +9,8 @@
     color: white;
     text-align: center;
     border-radius: 25px;
+    user-select: none;
+    padding: 0 1em;
 
     &::before {
         content: '';
@@ -18,7 +19,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgb(0, 0, 0);
+        opacity: var(--darken-opacity);
         border-radius: 25px;
         z-index: 1;
     }
@@ -26,6 +28,7 @@
     .title {
         font-size: 2rem;
         font-weight: bold;
+        text-align: start;
         z-index: 2;
         text-shadow:
             -1px -1px 0 black,
